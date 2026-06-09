@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secret Message</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:url('mikasa.jpg');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-color:black;
+
+    font-family:Arial,sans-serif;
+}
+
+.box{
+    background:rgba(0,0,0,0.55);
+    backdrop-filter:blur(8px);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    width:320px;
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+button{
+    margin-top:10px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#ff4d94;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff1a75;
+}
+
+#message{
+    display:none;
+    margin-top:20px;
+    font-size:30px;
+    color:#ff99cc;
+    text-shadow:0 0 15px #ff66b2;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Enter Secret Name 💖</h2>
+
+<input type="text" id="nameInput" placeholder="Type here">
+
+<br>
+
+<button onclick="checkName()">Open</button>
+
+<div id="message">
+BISHHH,<br>
+I LOVE U 
+</div>
+
+</div>
+
+<script>
+function checkName() {
+    let name = document.getElementById("nameInput").value.trim();
+
+    if(name.toUpperCase() === "AYEHSAAA") {
+        document.getElementById("message").style.display = "block";
+    } else {
+        alert("Wrong Name!");
+    }
+}
+</script>
+
+</body>
+</html>
