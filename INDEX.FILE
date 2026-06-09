@@ -1,24 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Secret Message</title>
+<title>Secret Message </title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
+    margin:0;
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
 
-    background:url('mikasa.jpg');
+    background:url('mikasa.jpg.jfif');
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
@@ -28,8 +23,7 @@ body{
 }
 
 .box{
-    background:rgba(0,0,0,0.55);
-    backdrop-filter:blur(8px);
+    background:rgba(0,0,0,0.6);
     padding:30px;
     border-radius:20px;
     text-align:center;
@@ -50,14 +44,14 @@ input{
 }
 
 button{
-    margin-top:10px;
-    padding:12px 25px;
+    margin-top:12px;
+    padding:10px 20px;
     border:none;
     border-radius:10px;
     background:#ff4d94;
     color:white;
-    font-size:16px;
     cursor:pointer;
+    font-size:16px;
 }
 
 button:hover{
@@ -67,9 +61,10 @@ button:hover{
 #message{
     display:none;
     margin-top:20px;
-    font-size:30px;
+    font-size:28px;
     color:#ff99cc;
-    text-shadow:0 0 15px #ff66b2;
+    font-weight:bold;
+    text-shadow:0 0 10px #ff66b2;
 }
 </style>
 </head>
@@ -77,30 +72,29 @@ button:hover{
 <body>
 
 <div class="box">
+    <h2>Enter Your Name </h2>
 
-<h2>Enter Secret Name 💖</h2>
+    <input type="text" id="nameInput" placeholder="Type your name">
 
-<input type="text" id="nameInput" placeholder="Type here">
+    <br><br>
 
-<br>
+    <button onclick="checkName()">Open</button>
 
-<button onclick="checkName()">Open</button>
-
-<div id="message">
-BISHHH,<br>
-I LOVE U 
-</div>
-
+    <div id="message">
+        BISHHH,<br>
+        I LOVE U 
+    </div>
 </div>
 
 <script>
-function checkName() {
+function checkName(){
+
     let name = document.getElementById("nameInput").value.trim();
 
-    if(name.toUpperCase() === "AYEHSAAA") {
+    if(name.toLowerCase() === "ayesha"){
         document.getElementById("message").style.display = "block";
     } else {
-        alert("Wrong Name!");
+        alert("Only Ayesha can open this ");
     }
 }
 </script>
